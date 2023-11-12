@@ -61,7 +61,7 @@
     word-wrap: break-word
 }
 
-.LogoBack1{
+.BigLogo{
     width: 343px;
     height: 235px;
     padding-bottom: 34.76px;
@@ -71,5 +71,5 @@
     box-shadow: 0px 9px 4px rgba(0, 0, 0, 0.25);
     justify-content: flex-end;
     align-items: center;
-    display: inline-flex"
+    display: inline-flex
 }
