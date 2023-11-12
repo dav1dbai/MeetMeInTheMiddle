@@ -20,7 +20,7 @@ from django.db import models
 class Friend(models.Model):
     name = models.CharField(max_length=200)
     location = models.CharField(max_length=200)
-    upload = models.ImageField(default="NULL")
+    upload = models.ImageField(upload_to="media/", default="NULL")
 
     def __str__(self):
         return self.name + " at " + self.location

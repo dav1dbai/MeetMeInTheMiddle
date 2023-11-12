@@ -4,4 +4,4 @@ from .models import Friend
 class FriendForm(ModelForm):
     class Meta:
         model = Friend
-        fields = ["name", "location"]
+        fields = ["name", "location", "upload"]

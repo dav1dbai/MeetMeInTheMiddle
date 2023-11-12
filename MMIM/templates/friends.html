@@ -7,7 +7,7 @@
 <script src=""></script>
 <body>
     <div>
-        <form method="post">
+        <form method="post" enctype="multipart/form-data">
             {% csrf_token %}
             {{ form.as_p }}
         <button class="button">Submit</button>
@@ -19,7 +19,7 @@
         {% for friend in friends %}
             <div>{{friend.name}}</div>
             <div>{{friend.location}}</div>
-            <img src="{{ friend.upload }}">
+            <img src="media/{{ friend.upload }}">
         {% endfor %}
     </div> 
 </body>

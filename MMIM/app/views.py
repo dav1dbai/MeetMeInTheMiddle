@@ -17,7 +17,7 @@ def index(request):
 
 def friends(request):
     if request.method == "POST":
-        form = FriendForm(request.POST)
+        form = FriendForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
     print(Friend.objects.filter().values())
