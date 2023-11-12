@@ -7,13 +7,12 @@
 <link rel="stylesheet" href="static/indexstyle.css">
 <body>
   <div class="Desktop1">
-    <div class="Rectangle2"></div>
     <div class="Rectangle1"></div>
-    <div class="Line1">Meet Me in <br/>the Middle </div>
+    <img src="static/text.png" class="text">
+    <img src = "static/searchtext.png" class = "searchLogo">
+    <a href = "http://127.0.0.1:8000/friends"><button class="button" >View my friends</button></a>
     <div class="Line2">Match me with</div>
-    <div class="MagGlass">
-      <img class="Icon"/>
-    </div>
+  </div>
     <div class="Group1">
       <img src="/static/searchicon.png" class="searchIcon">
       <div class = "form">
@@ -24,26 +23,28 @@
         </form>
       </div>
     </div>
-    <div id='map' width="100%" style='height:400px'></div>
-    <script>
-      mapboxgl.accessToken = "{{context.mapbox_access_token}}";
-      var map = new mapboxgl.Map({
-      container: 'map',
-      style: 'mapbox://styles/mapbox/streets-v10'
-      });
-      const marker = new mapboxgl.Marker({color: '#F157A4'})
-        .setLngLat([30.5, 50.5])
-        .addTo(map);
-    </script>
-    <div>
+    <div class="response">
+      <h1 style="color: #FF95A5;font-family: SansitaOne;">Response:</h1>
+      <img src="media/{{context.friend.upload}}" height="210" width="200">
+      <br>
       {{context.text}}
       <br>
       <br>
       {% for document in context.documents %}
-          <div>{{document.title}}</div>
-          <div>{{document.url}}</div>
+          <div class = "links">{{document.title}} : {{document.url}}</div>
       {% endfor %}
     </div> 
+    <!-- <div id='map' width="100%" style='height:400px; bottom:1px;' class="map"></div> -->
+    <script>
+      mapboxgl.accessToken = '{{context.mapbox_access_token}}'
+      const map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v12'
+      })
+      const loc = '{{context.friendloc}}'
+      new mapboxgl.Marker().setLngLat([-118.285530,34.0224]).addTo(map)
+      new mapboxgl.Marker().setLngLat(loc).addTo(map)
+    </script>
   </div>
 </body>
 </html>

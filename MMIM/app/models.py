@@ -8,7 +8,7 @@ def getResponse(prompt):
     response = co.chat(
         model = 'command',
         message = prompt,
-        temperature = 0.3,
+        temperature = 0.9,
         citation_quality = 'accurate',
         connectors =[{"id": "web-search"}]
     )
@@ -34,15 +34,15 @@ class Friend(models.Model):
     def getRec(self):
         location = self.location
         ulocation = self.getLocation()
-        print(ulocation)
-        print(location)
+        # print(ulocation)
+        # print(location)
         prompt = '''
             Find a location equidistant between {} and {}. 
             List some attractions and activities there along with a brief description.
             Include sources. 
             '''
         prompt = prompt.format(ulocation, location)
-        print(prompt)
+        # print(prompt)
         streaming_gens = getResponse(prompt)
 
         json_obj = {
@@ -54,3 +54,9 @@ class Friend(models.Model):
     def get_all_objects(self):
         queryset = self._meta.model.objects.all()
         return queryset
+    
+    def getLatLong(self):
+        geolocator = Nominatim(user_agent = "davidbai2020@gmail.com")
+        location = geolocator.geocode(self.location)
+        out = [location.longitude, location.latitude]
+        return out
