@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<title>Homepage</title>
+<style>
+</style>
+<script src=""></script>
+<body>
+    <div>
+        <form method = "post">
+            {% csrf_token %}
+            <label>Friend Name:</label>
+            <input type="text" name="name">
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+    <div>
+        {{context.text}}
+        <br>
+        <br>
+        {% for document in context.documents %}
+            <div>{{document.title}}</div>
+            <div>{{document.url}}</div>
+        {% endfor %}
+    </div> 
+</body>
+</html>
