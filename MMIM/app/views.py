@@ -13,8 +13,9 @@ def index(request):
         print(request.POST.get("name"))
         FriendInstance = get_object_or_404(Friend, name=request.POST.get("name"))
         context = FriendInstance.getRec()
+        # context.update({"user": get_object_or_404(Friend, name="David")})
+        context.update({"friend": FriendInstance})
     context.update({"mapbox_access_token": mapbox_access_token})
-    context.update({"user": get_object_or_404(Friend, name="David")}, {"friend": FriendInstance})
     return render(request, "index.html", {"context": context})
 
 def friends(request):
