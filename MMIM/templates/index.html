@@ -24,6 +24,16 @@
       </div>
     </div>
     <div id='map' width="100%" style='height:400px'></div>
+    <script>
+      mapboxgl.accessToken = '{{context.mapbox_access_token}}';
+      console.log(mapboxgl.accessToken)
+      const map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v12'
+      })
+      new mapboxgl.Marker().setLngLat([-118.285530,34.0224]).addTo(map);
+      new mapboxgl.Marker().setLngLat([0,0]).addTo(map);
+    </script>
     <div>
       {{context.text}}
       <br>
