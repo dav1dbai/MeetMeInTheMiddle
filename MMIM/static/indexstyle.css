@@ -83,8 +83,8 @@
 .Group1{
     width: 79px;
     height: 75px;
-    left: 450px;
-    top: 675px;
+    left: 497px;
+    top: 700px;
     position: absolute;
 }
 
@@ -104,14 +104,6 @@
     left:10px;
 }
 
-.searchLogo{
-    width: 350px;
-    height: 265px;
-    left:745px;
-    top:175px;
-    position: absolute;
-}
-
 .form{
     position: absolute;
     left: 100px;
@@ -122,9 +114,6 @@
     width: 400px;
     height: 60px;
     border-color:#FF95A5;
-    border-radius: 25px;
-    position: relative;
-    top: -10px;
 }
 
 .sub{
