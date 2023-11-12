@@ -1,0 +1,75 @@
+@font-face {
+    font-family: SansitaOne;
+    src: url(SansitaOne.ttf);
+}
+
+.Desktop1{
+    width: 100%;
+    height: 100%;
+    position: center;
+    background: #FFEBFB;
+}
+
+.Block1{
+    width: 871px;
+    height: 170px;
+    left: 294px;
+    top: 578px;
+    position: absolute;
+    background: rgba(230.17, 158.76, 241.79, 0.50);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    border: 10px #F68DC1 solid"
+}
+
+.Block2{
+    width: 1256px;
+    height: 618px;
+    left: 101px;
+    top: 68px;
+    position: absolute;
+    background: linear-gradient(180deg, rgba(230.16, 140.15, 244.81, 0.82) 0%, rgba(217, 217, 217, 0) 100%);
+    border-radius: 25px"
+}
+
+.Block3{
+    width: 782px;
+    height: 240px;
+    left: 338px;
+    top: 222px;
+    position: absolute;
+    text-align: center;
+    color: #FF95A5;
+    font-size: 102px;
+    font-family: SansitaOne;
+    font-weight: 400;
+    text-transform: capitalize;
+    word-wrap: break-word
+}
+
+.Block4{
+    width: 782px;
+    height: 240px;
+    left: 338px;
+    top: 621px;
+    position: absolute;
+    text-align: center;
+    color: #E68A98;
+    font-size: 75px;
+    font-family: SansitaOne;
+    font-weight: 400;
+    word-wrap: break-word
+}
+
+.LogoBack1{
+    width: 343px;
+    height: 235px;
+    padding-bottom: 34.76px;
+    padding-left: 122.89px;
+    left: 728px; top: 187px;
+    position: absolute;
+    box-shadow: 0px 9px 4px rgba(0, 0, 0, 0.25);
+    justify-content: flex-end;
+    align-items: center;
+    display: inline-flex"
+}
