@@ -7,12 +7,11 @@
 <link rel="stylesheet" href="static/indexstyle.css">
 <body>
   <div class="Desktop1">
-    <div class="Rectangle2"></div>
     <div class="Rectangle1"></div>
     <div class="Line1">Meet Me in <br/>the Middle </div>
+    <img src="/static/SearchLogo.png" class="searchLogo">
     <div class="Line2">Match me with</div>
-    <div class="MagGlass">
-      <img class="Icon"/>
+
     </div>
     <div class="Group1">
       <img src="/static/searchicon.png" class="searchIcon">
@@ -26,14 +25,14 @@
     </div>
     <div id='map' width="100%" style='height:400px'></div>
     <script>
-      mapboxgl.accessToken = "{{context.mapbox_access_token}}";
-      var map = new mapboxgl.Map({
-      container: 'map',
-      style: 'mapbox://styles/mapbox/streets-v10'
-      });
-      const marker = new mapboxgl.Marker({color: '#F157A4'})
-        .setLngLat([30.5, 50.5])
-        .addTo(map);
+      mapboxgl.accessToken = '{{context.mapbox_access_token}}';
+      console.log(mapboxgl.accessToken)
+      const map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v12'
+      })
+      new mapboxgl.Marker().setLngLat([-118.285530,34.0224]).addTo(map);
+      new mapboxgl.Marker().setLngLat([0,0]).addTo(map);
     </script>
     <div>
       {{context.text}}
