@@ -1,8 +1,7 @@
-from decouple import config
 import json
 import cohere
 
-co = cohere.Client(config('CO_API_KEY'))
+co = cohere.Client('nTI4k8KctOt7AiB6JdKIJhnwDUeU1BzauNM6G6Op')
 
 def getResponse(prompt):
     response = co.chat(
@@ -21,6 +20,7 @@ from django.db import models
 class Friend(models.Model):
     name = models.CharField(max_length=200)
     location = models.CharField(max_length=200)
+    upload = models.ImageField(default="NULL")
 
     def __str__(self):
         return self.name + " at " + self.location
@@ -49,3 +49,7 @@ class Friend(models.Model):
             "documents": streaming_gens.documents
         }
         return json_obj
+    
+    def get_all_objects(self):
+        queryset = self._meta.model.objects.all()
+        return queryset

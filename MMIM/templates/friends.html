@@ -13,5 +13,14 @@
         <button class="button">Submit</button>
         </form>
     </div> 
+    <div>
+        <br>
+        <br>
+        {% for friend in friends %}
+            <div>{{friend.name}}</div>
+            <div>{{friend.location}}</div>
+            <img src="{{ friend.upload }}">
+        {% endfor %}
+    </div> 
 </body>
 </html>

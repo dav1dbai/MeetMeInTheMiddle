@@ -19,6 +19,7 @@ def friends(request):
     if request.method == "POST":
         form = FriendForm(request.POST)
         if form.is_valid():
-            Friend = form.save()
+            form.save()
+    print(Friend.objects.filter().values())
     form = FriendForm()
-    return render(request, "friends.html", {"form": form})
+    return render(request, "friends.html", {"form": form, "friends": Friend.objects.filter().values()})

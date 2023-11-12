@@ -1,0 +1,128 @@
+@font-face {
+    font-family: SansitaOne;
+    src: url(SansitaOne.ttf);
+}
+
+.Desktop1{
+    width: 100%;
+    height: 100%;
+    position: center;
+    background: #FFEBFB;
+}
+
+.Rectangle1{
+    width: 1256px;
+    height: 618px;
+    left: 101px;
+    top: 68px;
+    position: absolute;
+    background: linear-gradient(180deg, rgba(230.16, 140.15, 244.81, 0.82) 0%,rgba(217, 217, 217, 0) 100%);
+    border-radius: 25px;
+}
+
+.Rectangle2{
+    width: 464px;
+    height: 78px;
+    left: 497px;
+    top: 700px;
+    position: relative;
+    opacity: 0.50;
+    background: #FFFFFF;
+    border-radius: 50px;
+}
+
+.Line1{
+    width: 782px;
+    height: 240px;
+    left: 338px;
+    top: 222px;
+    position: absolute;
+    text-align: center;
+    color: #FF95A5;
+    font-size: 102px;
+    font-family: SansitaOne;
+    font-weight: 400;
+    text-transform: capitalize;
+    word-wrap: break-word;
+}
+
+.Line2{
+    width: 782px;
+    height: 240px;
+    left: 338px;
+    top: 621px;
+    position: absolute;
+    text-align: center;
+    color: #E68A98;
+    font-size: 50px;
+    font-family: SansitaOne;
+    font-weight: 400;
+    word-wrap: break-word;
+}
+
+.MagGlass{
+    width: 343px;
+    height: 235px;
+    padding-bottom: 34.76px;
+    padding-left: 122.89px;
+    left: 728px;
+    top: 187px;
+    position: absolute;
+    box-shadow: 0px 9px 4px rgba(0, 0, 0, 0.25);
+    justify-content: flex-end;
+    align-items: center;
+    display: inline-flex;
+}
+
+.Icon{
+    width: 220.11px;
+    height: 200.24px;
+    border: 3px #FFF2F2 solid src="https://via.placeholder.com/220x200";
+}
+
+.Group1{
+    width: 79px;
+    height: 75px;
+    left: 497px;
+    top: 700px;
+    position: absolute;
+}
+
+.BasicSearch{
+    width: 58.38px;
+    height: 55.59px;
+    left: 5.70px;
+    top: 14.91px;
+    position: absolute;
+    transform: rotate(-9.36deg);
+    transform-origin: 0 0;
+}
+
+.searchIcon{
+    width: 100px;
+    height: 100px;
+    left:10px;
+}
+
+.form{
+    position: absolute;
+    left: 100px;
+    top: 20px;
+}
+
+.field{
+    width: 400px;
+    height: 60px;
+    border-color:#FF95A5;
+}
+
+.sub{
+    left:100px;
+    top: 300px;
+}
+
+input, select, textarea{
+    color: #FF95A5;
+    font-family: SansitaOne;
+    font-size: 20px;
+}
