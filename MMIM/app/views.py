@@ -7,12 +7,14 @@ from .forms import FriendForm
 users = {}
 
 def index(request):
+    context = {}
+    mapbox_access_token = 'pk.eyJ1IjoiZGF2MWRiYWkiLCJhIjoiY2xvdnVzNXo1MHJiNzJqbnJwOXA2OGgzMSJ9.-6bDblDy1P_8idpzrACuUg'
     if request.method == "POST":
         print(request.POST.get("name"))
         FriendInstance = get_object_or_404(Friend, name=request.POST.get("name"))
         context = FriendInstance.getRec()
-        return render(request, "index.html", {"context": context})
-    context = ""
+    context.update({"mapbox_access_token": mapbox_access_token})
+    context.update({"user": get_object_or_404(Friend, name="David")}, {"friend": FriendInstance})
     return render(request, "index.html", {"context": context})
 
 def friends(request):
