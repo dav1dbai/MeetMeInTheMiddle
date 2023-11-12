@@ -1,7 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Sansita:ital,wght@1,800&display=swap');
+@font-face {
+    font-family: 'Sansita';
+    src: url('SansitaOne.ttf');
+}
 
 
-body {
+body{
     background: linear-gradient(#F58CC4, #FFF2F2);
 }
 
@@ -11,41 +14,41 @@ body {
     position: center;
 }
 
-.Block2 {
+.Block2{
     position: relative;
     top: 50px;
     left: 35%;
 }
 
-.img1 {
+.img1{
     position: relative;
     top: 0;
     left: 0;
 }
 
-.img2 {
+.img2{
     position: absolute;
     top: -50px;
     left: 270px;
 }
 
-.friends {
+.friends{
     transform: scale(0.5);
     position: relative;
     top: 50px;
     left: 8%;
 }
 
-.item {
+.item{
     background-color: #FFD1F5;
 }
 
-td {
+td{
     padding: 15px;
     display:block;
 }
 
-table {
+table{
     border-spacing: 30px;
     overflow-x: auto;
     display: block;
@@ -56,7 +59,7 @@ table {
     font-size: 30px;
 }
 
-.enter {
+.enter{
     margin: auto;
     width: 20%;
     border: 3px solid #F58CC4;
@@ -66,7 +69,7 @@ table {
     font-size: 30px;
 }
 
-.button {
+.button{
     background-color: #D15F88; /* Green */
     border: none;
     color: white;
@@ -79,7 +82,7 @@ table {
     cursor: pointer;
   }
 
-  input[type=text] {
+  input[type=text]{
     background-color: #D15F88;
     color: white;
   }

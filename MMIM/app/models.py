@@ -1,5 +1,6 @@
 import json
 import cohere
+from geopy.geocoders import Nominatim
 
 co = cohere.Client('nTI4k8KctOt7AiB6JdKIJhnwDUeU1BzauNM6G6Op')
 
