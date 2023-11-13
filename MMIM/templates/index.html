@@ -4,6 +4,7 @@
 <title>Homepage</title>
 <script src='https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js'></script>
 <link href='https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css' rel='stylesheet' />
+<link href="https://unpkg.com/maplibre-gl/dist/maplibre-gl.css" rel="stylesheet"/>
 <link rel="stylesheet" href="static/indexstyle.css">
 <body>
   <div class="Desktop1">
@@ -34,16 +35,26 @@
           <div class = "links">{{document.title}} : {{document.url}}</div>
       {% endfor %}
     </div> 
-    <!-- <div id='map' width="100%" style='height:400px; bottom:1px;' class="map"></div> -->
+    <div id='map' class="map"></div>
     <script>
-      mapboxgl.accessToken = '{{context.mapbox_access_token}}'
+      mapboxgl.accessToken = '{{context.mapbox_access_token}}';
       const map = new mapboxgl.Map({
         container: 'map',
-        style: 'mapbox://styles/mapbox/streets-v12'
+        style: 'mapbox://styles/mapbox/streets-v12',
+        center: [-118.285530,34.0224],
+        zoom: 6
       })
-      const loc = '{{context.friendloc}}'
-      new mapboxgl.Marker().setLngLat([-118.285530,34.0224]).addTo(map)
-      new mapboxgl.Marker().setLngLat(loc).addTo(map)
+      const loc = {
+        "Grace Li": [-117.1611,32.7157],
+        "David Bai": [-121.8853,37.3387],
+        "Hallie Faust": [-122.1430,37.4419],
+        "Adit Hattikudur": [-122.3328, 47.6061]
+      };
+      console.log(loc['{{context.friend.name}}']);
+      const LA = new mapboxgl.Marker().setLngLat([-118.285530,34.0224]);
+      LA.addTo(map);
+      const friend = new mapboxgl.Marker().setLngLat(loc['{{context.friend.name}}']);
+      friend.addTo(map);
     </script>
   </div>
 </body>

@@ -174,3 +174,11 @@ input, select, textarea{
     top: 250px;
     left: 450px
 }
+
+.map{
+    height:400px; 
+    width: 400px;
+    bottom: 50px;
+    right: 400px;
+    position: absolute;
+}
