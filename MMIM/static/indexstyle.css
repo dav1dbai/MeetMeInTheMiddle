@@ -176,8 +176,8 @@ input, select, textarea{
 }
 
 .map{
-    height:400px; 
-    width: 400px;
+    height: 300px; 
+    width: 300px;
     bottom: 50px;
     right: 400px;
     position: absolute;
